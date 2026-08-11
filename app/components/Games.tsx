@@ -13,6 +13,7 @@ interface Game {
     tags: string[];
     link?: string;
     delay: number;
+    wishlist?: boolean;
 }
 
 const games: Game[] = [
@@ -26,6 +27,7 @@ const games: Game[] = [
         tags: ["2.5D", "Strategy", "Medieval"],
         link: "https://store.steampowered.com/app/4515610/Bean__Debt/?beta=0",
         delay: 0,
+        wishlist: true,
     },
     {
         id: 2,
@@ -104,33 +106,17 @@ export default function Games() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {games.map((game) => (
                         <article key={game.id} data-aos="fade-up" data-aos-delay={game.delay} className="group relative flex flex-col bg-[#111111] border border-white/8 hover:border-white/20 hover:bg-[#1c1c1c] transition-colors duration-300 cursor-pointer overflow-hidden">
-                            {/* Top accent line — muncul saat hover */}
-                            <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#BB9B53] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-
-                            {/* Thumbnail */}
                             <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/9" }}>
                                 <Image src={game.image} alt={game.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+
+                                {game.wishlist && <div className="absolute top-3 right-3 z-10 flex items-center gap-1.5 bg-[#BB9B53] text-[#1a1a1a] text-[11px] font-bold tracking-wide uppercase px-3 py-1.5 rounded-full shadow-lg shadow-black/30">Wishlist on Steam</div>}
                             </div>
 
-                            {/* Content */}
-                            <div className="flex flex-col flex-1 p-6">
-                                {/* Status */}
-                                {/* <div className="flex items-center gap-2 mb-3">
-                                    <span className={`w-1.5 h-1.5 rounded-full ${statusConfig[game.status].dot} shrink-0`} />
-                                    <span className={`${dmSans.className} text-xs font-medium tracking-wide ${statusConfig[game.status].text}`}>{statusConfig[game.status].label}</span>
-                                </div> */}
-
-                                {/* Genre */}
-                                {/* <p className={`${dmSans.className} text-white/30 text-xs tracking-[0.2em] uppercase mb-2`}>{game.genre}</p> */}
-
-                                {/* Title */}
+                            <div className="flex flex-col flex-1 p-6 relative">
                                 <h3 className={`${lilitaOne.className} text-white text-xl mb-3 group-hover:text-[#BB9B53] transition-colors duration-300`}>{game.title}</h3>
-
-                                {/* Description */}
                                 <p className={`${dmSans.className} text-white/50 text-sm leading-relaxed flex-1`}>{game.description}</p>
 
-                                {/* Tags + Link */}
                                 <div className="flex items-end justify-between gap-3 mt-5 pt-5 border-t border-white/8">
                                     <div className="flex flex-wrap gap-x-3 gap-y-1">
                                         {game.tags.map((tag) => (
