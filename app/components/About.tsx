@@ -71,36 +71,43 @@ const socials = [
 export default function About() {
     return (
         <section id="about" className="section-texture relative w-full bg-[#171717] py-16 px-6 lg:px-16 overflow-hidden" aria-labelledby="about-heading">
-            <div className="max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 items-end">
-                    {/* Left — text content */}
-                    <div>
-                        {/* Heading */}
-                        <div data-aos="fade-up">
-                            <h2 id="about-heading" className={`${lilitaOne.className} text-3xl lg:text-4xl text-white leading-tight flex items-center gap-4`}>
-                                About Us <img src="/images/lume-gumi-star.png" alt="Star" width={30} />
-                            </h2>
-                        </div>
-
-                        {/* Description */}
-                        <p data-aos="fade-up" data-aos-delay="100" className={`${dmSans.className} text-white/55 text-base lg:text-lg leading-8 mt-6 max-w-2xl`}>
-                            Lume Gumi is an indie game studio from Indonesia dedicated to crafting immersive gaming experiences rich in narrative, memorable characters, and meaningful stories. We believe games are more than entertainment, they are a medium for inspiring the world.
-                        </p>
-
-                        {/* Social icons */}
-                        <div data-aos="fade-up" data-aos-delay="240" className="mt-6 flex gap-1">
-                            {socials.map((social) => (
-                                <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="text-white/30 hover:text-[#BB9B53] transition-colors duration-200 p-2 rounded-md hover:bg-white/8">
-                                    {social.icon}
-                                </a>
-                            ))}
-                        </div>
+            <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_24rem] xl:grid-cols-[1fr_28rem] gap-1">
+                {/* Left — text content */}
+                <div>
+                    {/* Heading */}
+                    <div data-aos="fade-up">
+                        <h2 id="about-heading" className={`${lilitaOne.className} text-3xl lg:text-4xl text-white leading-tight flex items-center gap-4`}>
+                            About Us <img src="/images/lume-gumi-star.png" alt="Star" width={30} />
+                        </h2>
                     </div>
 
-                    {/* Right — character image */}
-                    <div data-aos="fade-up" data-aos-delay="200" className="lg:flex items-end justify-center">
-                        <img src="/images/bean-and-debt-char.png" alt="Bean and Debt Character" className="w-96 xl:w-[26rem] h-auto object-contain object-bottom drop-shadow-2xl" onContextMenu={(e) => e.preventDefault()} onDragStart={(e) => e.preventDefault()} />
+                    {/* Description */}
+                    <p data-aos="fade-up" data-aos-delay="100" className={`${dmSans.className} text-white/55 text-base lg:text-lg leading-8 mt-6 max-w-2xl`}>
+                        Lume Gumi is an indie game studio from Indonesia dedicated to crafting immersive gaming experiences rich in narrative, memorable characters, and meaningful stories. We believe games are more than entertainment, they are a medium for inspiring the world.
+                    </p>
+
+                    {/* Social icons */}
+                    <div data-aos="fade-up" data-aos-delay="240" className="mt-6 flex gap-1">
+                        {socials.map((social) => (
+                            <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="text-white/30 hover:text-[#BB9B53] transition-colors duration-200 p-2 rounded-md hover:bg-white/8">
+                                {social.icon}
+                            </a>
+                        ))}
                     </div>
+                </div>
+
+                {/* Right — kolom gambar: -mb-16 (mobile) / -my-16 (desktop) menembus padding section */}
+                <div data-aos="fade-up" data-aos-delay="200" className="flex justify-center lg:block relative -mb-16 lg:-my-16 self-stretch">
+                    {/* Dekorasi glow — sekarang tampil di semua ukuran, ukuran menyesuaikan breakpoint */}
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-56 h-56 lg:w-72 lg:h-72 rounded-full bg-[#BB9B53]/20 blur-[60px] pointer-events-none" />
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-44 h-44 lg:w-60 lg:h-60 rounded-full border border-[#BB9B53]/12 pointer-events-none" />
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-32 h-32 lg:w-44 lg:h-44 rounded-full border border-[#BB9B53]/20 pointer-events-none" />
+                    <div className="absolute top-8 left-6 w-2 h-2 rounded-full bg-[#BB9B53]/50 pointer-events-none" />
+                    <div className="absolute top-16 left-12 w-1 h-1 rounded-full bg-[#BB9B53]/30 pointer-events-none" />
+                    <div className="absolute top-12 right-8 w-1.5 h-1.5 rounded-full bg-[#BB9B53]/40 pointer-events-none" />
+
+                    {/* Karakter: mobile full-width relative, desktop tetap absolute nempel bawah */}
+                    <img src="/images/bean-and-debt-char.png" alt="Bean and Debt Character" className="relative w-full max-w-[320px] h-auto object-contain mx-auto lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-none" onContextMenu={(e) => e.preventDefault()} onDragStart={(e) => e.preventDefault()} />
                 </div>
             </div>
         </section>

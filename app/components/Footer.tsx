@@ -66,7 +66,7 @@ export default function Footer() {
                     </div>
 
                     <div className="flex flex-col gap-3">
-                        <p className={`${dmSans.className} text-white/25 text-xs tracking-[0.25em] uppercase mb-1`}>Navigate</p>
+                        <p className={`${dmSans.className} text-white/25 text-xs tracking-[0.25em] uppercase mb-1`}>Menu</p>
                         {navLinks.map((link) => (
                             <Link key={link.label} href={link.href} className={`${dmSans.className} text-white/50 text-sm hover:text-white transition-colors duration-200`}>
                                 {link.label}

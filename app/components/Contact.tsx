@@ -60,7 +60,7 @@ export default function Contact() {
     return (
         <section id="contact" className="section-texture w-full bg-[#1a1a1a] relative py-20 px-6 lg:px-16 overflow-hidden" aria-labelledby="contact-heading">
             <div className="max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-14 items-end">
+                <div className="grid lg:grid-cols-[1fr_20rem] xl:grid-cols-[1fr_24rem] gap-1 lg:gap-4">
                     {/* Left — contact content */}
                     <div>
                         <div className="mb-7" data-aos="fade-up">
@@ -98,12 +98,10 @@ export default function Contact() {
                             {socials.map((social) => (
                                 <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={`Visit Lume Gumi on ${social.label}`} className={`group flex flex-col gap-4 p-6 border border-white/8 ${social.color} transition-all duration-300 hover:-translate-y-0.5`}>
                                     <span className={`text-white/30 transition-colors duration-300 ${social.iconColor}`}>{social.icon}</span>
-
                                     <div className="flex flex-col gap-0.5 mt-auto">
                                         <p className={`${dmSans.className} text-white/35 text-xs tracking-widest uppercase`}>{social.label}</p>
                                         <p className={`${lilitaOne.className} text-white text-base`}>{social.handle}</p>
                                     </div>
-
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-white/20 group-hover:text-white/50 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 self-end">
                                         <line x1="7" y1="17" x2="17" y2="7" />
                                         <polyline points="7 7 17 7 17 17" />
@@ -113,9 +111,18 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    {/* Right — character image */}
-                    <div data-aos="fade-left" data-aos-delay="100" className="lg:flex items-end justify-center self-end">
-                        <img src="/images/plushie-char.png" alt="Plushie Character" className="w-80 xl:w-96 h-auto object-contain object-bottom drop-shadow-2xl" onContextMenu={(e) => e.preventDefault()} onDragStart={(e) => e.preventDefault()} />
+                    {/* Right — kolom gambar: -mb-20 (mobile) / -my-20 (desktop) menembus padding section */}
+                    <div data-aos="fade-up" data-aos-delay="100" className="flex justify-center lg:block relative -mb-20 lg:-my-20 self-stretch">
+                        {/* Dekorasi glow — sekarang tampil di semua ukuran, ukuran menyesuaikan breakpoint */}
+                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-48 lg:w-64 lg:h-64 rounded-full bg-[#BB9B53]/15 blur-[50px] pointer-events-none" />
+                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-40 h-40 lg:w-56 lg:h-56 rounded-full border border-white/8 pointer-events-none" />
+                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-28 lg:w-36 lg:h-36 rounded-full border border-[#BB9B53]/15 pointer-events-none" />
+                        <div className="absolute top-10 right-6 w-2 h-2 rounded-full bg-[#BB9B53]/45 pointer-events-none" />
+                        <div className="absolute top-20 right-14 w-1 h-1 rounded-full bg-[#BB9B53]/25 pointer-events-none" />
+                        <div className="absolute top-6 left-8 w-1.5 h-1.5 rounded-full bg-white/15 pointer-events-none" />
+
+                        {/* Karakter: mobile full-width relative, desktop tetap absolute nempel bawah */}
+                        <img src="/images/plushie-char.png" alt="Plushie Character" className="relative w-full max-w-[300px] h-auto object-contain mx-auto lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-none" onContextMenu={(e) => e.preventDefault()} onDragStart={(e) => e.preventDefault()} />
                     </div>
                 </div>
             </div>
