@@ -112,7 +112,7 @@ export default function Contact() {
                     </div>
 
                     {/* Right — kolom gambar: -mb-20 (mobile) / -my-20 (desktop) menembus padding section */}
-                    <div data-aos="fade-up" data-aos-delay="100" className="flex justify-center lg:block relative -mb-20 lg:-my-20 self-stretch">
+                    <div data-aos="fade-up" data-aos-delay="100" className="flex justify-center lg:block relative mt-8 lg:mt-0 -mb-20 lg:-my-20 self-stretch">
                         {/* Dekorasi glow — sekarang tampil di semua ukuran, ukuran menyesuaikan breakpoint */}
                         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-48 lg:w-64 lg:h-64 rounded-full bg-[#BB9B53]/15 blur-[50px] pointer-events-none" />
                         <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-40 h-40 lg:w-56 lg:h-56 rounded-full border border-white/8 pointer-events-none" />
@@ -122,7 +122,7 @@ export default function Contact() {
                         <div className="absolute top-6 left-8 w-1.5 h-1.5 rounded-full bg-white/15 pointer-events-none" />
 
                         {/* Karakter: mobile full-width relative, desktop tetap absolute nempel bawah */}
-                        <img src="/images/plushie-char.png" alt="Plushie Character" className="relative w-full max-w-[300px] h-auto object-contain mx-auto lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-none" onContextMenu={(e) => e.preventDefault()} onDragStart={(e) => e.preventDefault()} />
+                        <img src="/images/plushie-char.png" alt="Plushie Character" className="relative w-full max-w-[340px] h-auto object-contain mx-auto lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-none" onContextMenu={(e) => e.preventDefault()} onDragStart={(e) => e.preventDefault()} />
                     </div>
                 </div>
             </div>

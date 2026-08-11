@@ -97,7 +97,7 @@ export default function About() {
                 </div>
 
                 {/* Right — kolom gambar: -mb-16 (mobile) / -my-16 (desktop) menembus padding section */}
-                <div data-aos="fade-up" data-aos-delay="200" className="flex justify-center lg:block relative -mb-16 lg:-my-16 self-stretch">
+                <div data-aos="fade-up" data-aos-delay="200" className="flex justify-center lg:block relative mt-8 lg:mt-0 -mb-16 lg:-my-16 self-stretch">
                     {/* Dekorasi glow — sekarang tampil di semua ukuran, ukuran menyesuaikan breakpoint */}
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-56 h-56 lg:w-72 lg:h-72 rounded-full bg-[#BB9B53]/20 blur-[60px] pointer-events-none" />
                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-44 h-44 lg:w-60 lg:h-60 rounded-full border border-[#BB9B53]/12 pointer-events-none" />
