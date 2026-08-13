@@ -7,8 +7,8 @@ const socials = [
         label: "Instagram",
         handle: "@lume_gumi",
         href: "https://instagram.com/lume_gumi",
-        color: "hover:border-pink-500/40 hover:bg-pink-500/5",
-        iconColor: "group-hover:text-pink-400",
+        color: "hover:border-[#BB9B53]/30 hover:bg-white/3",
+        iconColor: "group-hover:text-[#BB9B53]",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -21,8 +21,8 @@ const socials = [
         label: "Twitter / X",
         handle: "@Lume_Gumi",
         href: "https://x.com/Lume_Gumi",
-        color: "hover:border-sky-500/40 hover:bg-sky-500/5",
-        iconColor: "group-hover:text-sky-400",
+        color: "hover:border-[#BB9B53]/30 hover:bg-white/3",
+        iconColor: "group-hover:text-[#BB9B53]",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -33,8 +33,8 @@ const socials = [
         label: "YouTube",
         handle: "@LumeGumi",
         href: "https://www.youtube.com/@LumeGumi",
-        color: "hover:border-red-500/40 hover:bg-red-500/5",
-        iconColor: "group-hover:text-red-400",
+        color: "hover:border-[#BB9B53]/30 hover:bg-white/3",
+        iconColor: "group-hover:text-[#BB9B53]",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
                 <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
@@ -46,8 +46,8 @@ const socials = [
         label: "Facebook",
         handle: "Lume Gumi",
         href: "https://web.facebook.com/profile.php?id=61584893652738",
-        color: "hover:border-blue-500/40 hover:bg-blue-500/5",
-        iconColor: "group-hover:text-blue-400",
+        color: "hover:border-[#BB9B53]/30 hover:bg-white/3",
+        iconColor: "group-hover:text-[#BB9B53]",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
