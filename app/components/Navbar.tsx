@@ -7,7 +7,7 @@ const navLinks = [
     { label: "HOME", href: "/" },
     { label: "ABOUT US", href: "#about" },
     { label: "GAMES", href: "#games" },
-    { label: "CONTACT", href: "#contact" },
+    { label: "CONTACT US", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -50,12 +50,7 @@ export default function Navbar() {
                 <ul className="hidden md:flex items-center gap-8 lg:gap-10">
                     {navLinks.map((link) => (
                         <li key={link.label}>
-                            <a
-                                href={link.href}
-                                id={`nav-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
-                                className={linkClass}
-                                onClick={(e) => handleNavClick(e, link.href)}
-                            >
+                            <a href={link.href} id={`nav-${link.label.toLowerCase().replace(/\s+/g, "-")}`} className={linkClass} onClick={(e) => handleNavClick(e, link.href)}>
                                 {link.label}
                                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#BB9B53] transition-all duration-300 group-hover:w-full" />
                             </a>
@@ -78,11 +73,7 @@ export default function Navbar() {
                 <ul className="flex flex-col bg-gray-950/95 backdrop-blur-md border-t border-white/10 px-6 py-4 gap-4">
                     {navLinks.map((link) => (
                         <li key={link.label}>
-                            <a
-                                href={link.href}
-                                className="text-white text-sm font-semibold tracking-widest hover:text-[#BB9B53] transition-colors duration-200 block py-1"
-                                onClick={(e) => handleNavClick(e, link.href)}
-                            >
+                            <a href={link.href} className="text-white text-sm font-semibold tracking-widest hover:text-[#BB9B53] transition-colors duration-200 block py-1" onClick={(e) => handleNavClick(e, link.href)}>
                                 {link.label}
                             </a>
                         </li>
