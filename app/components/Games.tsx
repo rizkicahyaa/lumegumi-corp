@@ -110,7 +110,11 @@ export default function Games() {
                                 <Image src={game.image} alt={game.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
 
-                                {game.wishlist && <div className="absolute top-3 right-3 z-10 flex items-center gap-1.5 bg-[#BB9B53] text-[#1a1a1a] text-[11px] font-bold tracking-wide uppercase px-3 py-1.5 rounded-full shadow-lg shadow-black/30">Wishlist on Steam</div>}
+                                {game.wishlist && (
+                                    <div className="absolute top-3 right-3 z-10 flex items-center gap-1.5 bg-[#BB9B53] text-[#1a1a1a] text-[11px] font-bold tracking-wide uppercase px-3 py-1.5 rounded-full shadow-lg shadow-black/30">
+                                        <Image src="/images/steam.webp" alt="Steam" width={20} height={20} className="object-contain" /> Wishlist on Steam
+                                    </div>
+                                )}
                             </div>
 
                             <div className="flex flex-col flex-1 p-6 relative">
