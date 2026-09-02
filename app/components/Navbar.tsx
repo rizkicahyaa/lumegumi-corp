@@ -42,7 +42,7 @@ export default function Navbar() {
             <nav className="flex items-center justify-between px-6 py-4 lg:px-12">
                 <Link href="/" className="flex items-center gap-2 shrink-0" id="navbar-logo">
                     <div className="relative flex items-center justify-center w-24">
-                        <img src="images/lume-gumi-logo.png" alt="logo" className="w-full h-full object-contain" />
+                        <img src="/images/lume-gumi-logo.png" alt="logo" className="w-full h-full object-contain" />
                     </div>
                 </Link>
 
