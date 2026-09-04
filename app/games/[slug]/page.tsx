@@ -19,12 +19,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const game = getGameBySlug(slug);
-    if (!game) return { title: "Game Not Found – Lume Gumi" };
+    if (!game) return { title: "Game Not Found - Lume Gumi" };
     return {
-        title: `${game.title} – Lume Gumi Corp.`,
+        title: `${game.title} - Lume Gumi Corp.`,
         description: game.description,
         openGraph: {
-            title: `${game.title} – Lume Gumi Corp.`,
+            title: `${game.title} - Lume Gumi Corp.`,
             description: game.description,
             images: [{ url: game.image }],
         },
@@ -50,35 +50,37 @@ export default async function GameDetailPage({ params }: Props) {
                     {/* dark gradient overlays */}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent" />
                     <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/80 via-transparent to-transparent" />
+                    {/* top overlay — keeps navbar text readable */}
+                    <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0a]/80 to-transparent" />
                 </div>
 
                 {/* Hero content */}
                 <div className="relative z-10 px-6 lg:px-16 flex flex-col justify-end h-full pb-12 pt-40">
                     <div className="max-w-6xl mx-auto w-full">
-                    {/* Back link */}
-                    <Link href="/#games" className={`${dmSans.className} inline-flex items-center gap-2 text-white/50 hover:text-[#BB9B53] text-sm font-medium transition-colors duration-200 mb-8 group w-fit`} id="back-to-games">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-1">
-                            <polyline points="15 18 9 12 15 6" />
-                        </svg>
-                        Back to Games
-                    </Link>
+                        {/* Back link */}
+                        <Link href="/#games" className={`${dmSans.className} inline-flex items-center gap-2 text-white/50 hover:text-[#BB9B53] text-sm font-medium transition-colors duration-200 mb-8 group w-fit`} id="back-to-games">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-1">
+                                <polyline points="15 18 9 12 15 6" />
+                            </svg>
+                            Back to Games
+                        </Link>
 
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                        {game.tags.map((tag) => (
-                            <span key={tag} className={`${dmSans.className} text-[10px] font-semibold tracking-[0.2em] uppercase text-white/50 border border-white/15 px-3 py-1 rounded-full`}>
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2 mb-4">
+                            {game.tags.map((tag) => (
+                                <span key={tag} className={`${dmSans.className} text-[10px] font-semibold tracking-[0.2em] uppercase text-white/50 border border-white/15 px-3 py-1 rounded-full`}>
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
 
-                    {/* Title */}
-                    <h1 className={`${lilitaOne.className} text-white text-4xl lg:text-6xl leading-tight mb-3`} id="game-title">
-                        {game.title}
-                    </h1>
+                        {/* Title */}
+                        <h1 className={`${lilitaOne.className} text-white text-4xl lg:text-6xl leading-tight mb-3`} id="game-title">
+                            {game.title}
+                        </h1>
 
-                    {/* Genre */}
-                    <p className={`${dmSans.className} text-[#BB9B53] text-base font-medium`}>{game.genre}</p>
+                        {/* Genre */}
+                        <p className={`${dmSans.className} text-[#BB9B53] text-base font-medium`}>{game.genre}</p>
                     </div>
                 </div>
             </section>
