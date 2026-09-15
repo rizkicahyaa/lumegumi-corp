@@ -3,6 +3,7 @@ import HeroCarousel from './components/HeroCarousel'
 import About from './components/About'
 import Games from './components/Games'
 import OtherProjects from './components/OtherProjects'
+import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Games />
       <OtherProjects />
+      <Testimonials />
       <Contact />
       <Footer />
     </main>
