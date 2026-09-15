@@ -18,16 +18,9 @@ export default function Games() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {games.map((game) => (
-                        <Link
-                            key={game.id}
-                            href={`/games/${game.slug}`}
-                            id={`game-card-${game.slug}`}
-                            data-aos="fade-up"
-                            data-aos-delay={game.delay}
-                            className="group relative flex flex-col bg-[#111111] border border-white/8 hover:border-white/20 hover:bg-[#1c1c1c] transition-colors duration-300 cursor-pointer overflow-hidden"
-                        >
+                        <Link key={game.id} href={`/games/${game.slug}`} id={`game-card-${game.slug}`} data-aos="fade-up" data-aos-delay={game.delay} className="group relative flex flex-col bg-[#111111] border border-white/8 hover:border-white/20 hover:bg-[#1c1c1c] transition-colors duration-300 cursor-pointer overflow-hidden">
                             <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/9" }}>
-                                <Image src={game.image} alt={game.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                                <Image src={game.image} alt={game.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
 
                                 {game.wishlist && (
