@@ -8,6 +8,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import GameGallery from "../../components/GameGallery";
 
+
 interface Props {
     params: Promise<{ slug: string }>;
 }
@@ -187,10 +188,15 @@ export default async function GameDetailPage({ params }: Props) {
                             </div>
                         </aside>
                     </div>
+                </div>
+            </div>
 
-                    {/* ── More Games ──────────────────────────────────────────── */}
-                    {otherGames.length > 0 && (
-                        <div className="mt-20 border-t border-white/8 pt-14">
+
+            {/* ── More Games ───────────────────────────────────────────────── */}
+            {otherGames.length > 0 && (
+                <div className="bg-[#0a0a0a] section-texture relative py-16 px-6 lg:px-16">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="border-t border-white/8 pt-14">
                             <h2 className={`${lilitaOne.className} text-white text-2xl mb-8 flex items-center gap-3`} id="more-games-heading">
                                 <img src="/images/lume-gumi-star.png" alt="" width={20} aria-hidden="true" />
                                 More Games
@@ -210,9 +216,9 @@ export default async function GameDetailPage({ params }: Props) {
                                 ))}
                             </div>
                         </div>
-                    )}
+                    </div>
                 </div>
-            </div>
+            )}
 
             <Footer />
         </main>

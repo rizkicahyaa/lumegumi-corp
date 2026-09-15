@@ -1,3 +1,12 @@
+export interface Testimonial {
+    name: string;
+    role: string;
+    initials: string;
+    avatarColor: string;
+    rating: number; // 1-5
+    quote: string;
+}
+
 export interface Game {
     id: number;
     slug: string;
@@ -11,6 +20,7 @@ export interface Game {
     tags: string[];
     link?: string;
     platform?: string[];
+    testimonials?: Testimonial[];
     delay: number;
     wishlist?: boolean;
     developer?: string;
@@ -35,6 +45,32 @@ export const games: Game[] = [
         delay: 0,
         wishlist: true,
         developer: "Lume Gumi Corp.",
+        testimonials: [
+            {
+                name: "Aria Kestrel",
+                role: "Strategy Game Enthusiast",
+                initials: "AK",
+                avatarColor: "#6C4FBF",
+                rating: 5,
+                quote: "Bean & Debt is an absolute gem. The art style is incredibly charming and the resource management keeps me hooked for hours. Managing debt with fantastical creditors? Pure genius.",
+            },
+            {
+                name: "Marcus Tan",
+                role: "Indie Game Reviewer",
+                initials: "MT",
+                avatarColor: "#2E7D6B",
+                rating: 5,
+                quote: "One of the most refreshing strategy games I've played in years. The 2.5D visuals are stunning and the gameplay loop is incredibly satisfying. Highly recommend!",
+            },
+            {
+                name: "Yuki Haramoto",
+                role: "Casual Gamer",
+                initials: "YH",
+                avatarColor: "#B85C38",
+                rating: 4,
+                quote: "I don't usually play strategy games but Bean & Debt won me over. The fairy-tale world is so cozy and the mechanics are easy to learn but hard to master.",
+            },
+        ],
         releaseYear: "2025",
         features: ["Charming 2.5D cartoon art style", "Deep resource management mechanics", "Rich medieval fairy-tale world", "Strategic debt management gameplay"],
     },
@@ -53,6 +89,32 @@ export const games: Game[] = [
         platform: ["PC (itch.io)", "Browser"],
         delay: 100,
         developer: "Lume Gumi Corp.",
+        testimonials: [
+            {
+                name: "Priya Nair",
+                role: "Casual Mobile Gamer",
+                initials: "PN",
+                avatarColor: "#C0392B",
+                rating: 5,
+                quote: "Fox Gotta Eat is so addictive! The risk vs reward mechanic is perfectly balanced and Saffron is absolutely adorable. I've been recommending it to all my friends.",
+            },
+            {
+                name: "Leo Vander",
+                role: "Game Jam Judge",
+                initials: "LV",
+                avatarColor: "#1A6B8A",
+                rating: 5,
+                quote: "Brilliant execution of a simple concept. The carnival atmosphere is vibrant, the audio design is top-notch, and the risk management element creates real tension.",
+            },
+            {
+                name: "Dina Pratiwi",
+                role: "itch.io Curator",
+                initials: "DP",
+                avatarColor: "#7D6B2E",
+                rating: 4,
+                quote: "A super fun browser game with a lot of heart. The art is cute, the gameplay is quick to pick up, and it's perfect for short gaming sessions.",
+            },
+        ],
         releaseYear: "2024",
         features: ["Risk vs reward gameplay", "Charming cartoon art style", "Addictive casual mechanics", "Lively carnival atmosphere"],
     },
@@ -71,6 +133,32 @@ export const games: Game[] = [
         platform: ["PC (itch.io)", "Browser"],
         delay: 200,
         developer: "Lume Gumi Corp.",
+        testimonials: [
+            {
+                name: "Kazuki Mori",
+                role: "Anime & Tactics Fan",
+                initials: "KM",
+                avatarColor: "#8E44AD",
+                rating: 5,
+                quote: "Plushie Odyssey perfectly blends adorable aesthetics with genuinely deep tactical gameplay. The formation system is unique and the anime art style is gorgeous.",
+            },
+            {
+                name: "Sofia Mendes",
+                role: "Tower Defense Veteran",
+                initials: "SM",
+                avatarColor: "#16A085",
+                rating: 5,
+                quote: "As someone who has played every major tower defense game out there, Plushie Odyssey stands out. The guardian knights mechanic adds a layer of strategy I haven't seen before.",
+            },
+            {
+                name: "Rafi Adnan",
+                role: "Game Developer",
+                initials: "RA",
+                avatarColor: "#D35400",
+                rating: 4,
+                quote: "Impressive work from Lume Gumi. The art direction is cohesive, the difficulty curve is well-tuned, and the fantasy world feels alive. Great game for anime fans.",
+            },
+        ],
         releaseYear: "2024",
         features: ["Tactical formation-based combat", "Anime-inspired fantasy world", "Progressive unit upgrades", "Challenging defense mechanics"],
     },
@@ -89,6 +177,32 @@ export const games: Game[] = [
         platform: ["PC (itch.io)", "Browser"],
         delay: 300,
         developer: "Lume Gumi Corp.",
+        testimonials: [
+            {
+                name: "Ethan Cole",
+                role: "Puzzle Game Collector",
+                initials: "EC",
+                avatarColor: "#2471A3",
+                rating: 5,
+                quote: "Echo Chamber messed with my head in the best way possible. Predicting sound waves to solve puzzles is such a creative concept. Each level feels like a unique mind puzzle.",
+            },
+            {
+                name: "Nadia Kuznetsova",
+                role: "Indie Game Blogger",
+                initials: "NK",
+                avatarColor: "#922B21",
+                rating: 5,
+                quote: "The atmosphere in Echo Chamber is unlike anything I've experienced. The eerie visuals paired with the sound-reflection mechanic create a uniquely unsettling and satisfying experience.",
+            },
+            {
+                name: "Bram Wijaya",
+                role: "Student Game Dev",
+                initials: "BW",
+                avatarColor: "#1E8449",
+                rating: 4,
+                quote: "Super creative concept from an indie team. The puzzle design is clever and the visual style is atmospheric. Would love to see a longer version with more chambers!",
+            },
+        ],
         releaseYear: "2024",
         features: ["Unique sound-based puzzle mechanics", "Ever-shifting level design", "Atmospheric 2.5D visuals", "Progressive difficulty curve"],
     },
@@ -107,6 +221,32 @@ export const games: Game[] = [
         platform: ["PC (itch.io)", "Browser"],
         delay: 400,
         developer: "Lume Gumi Corp.",
+        testimonials: [
+            {
+                name: "Tasha Renard",
+                role: "Game Jam Enthusiast",
+                initials: "TR",
+                avatarColor: "#7B241C",
+                rating: 5,
+                quote: "Path of Lumino is a stunning student project. The light and shadow mechanics are implemented beautifully, and the atmosphere is wonderfully contemplative. A real standout at GAMESEED 2025.",
+            },
+            {
+                name: "Hendra Putra",
+                role: "GAMESEED 2025 Attendee",
+                initials: "HP",
+                avatarColor: "#1F618D",
+                rating: 5,
+                quote: "I played this at GAMESEED and was blown away. The concept is elegant and the execution is well above what you'd expect from a student team. Lumino's journey is genuinely moving.",
+            },
+            {
+                name: "Cici Handayani",
+                role: "Puzzle Game Lover",
+                initials: "CH",
+                avatarColor: "#117A65",
+                rating: 4,
+                quote: "A thoughtful and beautiful puzzle game. The way light and shadow interact with the gameplay feels magical. Excited to see what Lume Gumi creates next!",
+            },
+        ],
         releaseYear: "2025",
         features: ["Light and shadow mechanics", "Atmospheric puzzle design", "Compelling narrative journey", "GAMESEED 2025 competition entry"],
     },
@@ -125,6 +265,32 @@ export const games: Game[] = [
         platform: ["PC (itch.io)", "Browser"],
         delay: 500,
         developer: "Lume Gumi Corp.",
+        testimonials: [
+            {
+                name: "Mia Thornton",
+                role: "Relaxation Game Fan",
+                initials: "MT",
+                avatarColor: "#6C3483",
+                rating: 5,
+                quote: "Piece By Piece is exactly what I needed. After a stressful day, sitting down and rebuilding the world one piece at a time is incredibly therapeutic. The art is gorgeous too.",
+            },
+            {
+                name: "Dito Asmara",
+                role: "Casual Gamer",
+                initials: "DA",
+                avatarColor: "#1A5276",
+                rating: 5,
+                quote: "Such a peaceful and satisfying experience. The puzzle mechanics are intuitive and rewarding, and the world that slowly comes together is beautiful. A perfect cozy game.",
+            },
+            {
+                name: "Fanny Setiawan",
+                role: "UI/UX Designer",
+                initials: "FS",
+                avatarColor: "#784212",
+                rating: 4,
+                quote: "From a design perspective, Piece By Piece is excellent. Clean UI, calming color palette, and a gameplay loop that respects the player's time. Lume Gumi clearly put a lot of care into this.",
+            },
+        ],
         releaseYear: "2024",
         features: ["Relaxing puzzle gameplay", "Calming visual atmosphere", "Satisfying reconstruction mechanics", "Stress-free gaming experience"],
     },
