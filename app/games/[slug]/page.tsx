@@ -8,7 +8,6 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import GameGallery from "../../components/GameGallery";
 
-
 interface Props {
     params: Promise<{ slug: string }>;
 }
@@ -37,7 +36,10 @@ export default async function GameDetailPage({ params }: Props) {
     const game = getGameBySlug(slug);
     if (!game) notFound();
 
-    const otherGames = games.filter((g) => g.slug !== game.slug).slice(0, 3);
+    const otherGames = games
+        .filter((g) => g.slug !== game.slug)
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3);
 
     return (
         <main className="flex flex-col flex-1">
@@ -190,7 +192,6 @@ export default async function GameDetailPage({ params }: Props) {
                     </div>
                 </div>
             </div>
-
 
             {/* ── More Games ───────────────────────────────────────────────── */}
             {otherGames.length > 0 && (
