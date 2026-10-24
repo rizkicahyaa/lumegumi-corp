@@ -19,12 +19,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const game = getGameBySlug(slug);
-    if (!game) return { title: "Game Not Found - Lume Gumi" };
+    if (!game) return { title: "Lume Gumi Corp. - Game Not Found" };
     return {
-        title: `${game.title} - Lume Gumi Corp.`,
+        title: `Lume Gumi Corp. - ${game.title}`,
         description: game.description,
         openGraph: {
-            title: `${game.title} - Lume Gumi Corp.`,
+            title: `Lume Gumi Corp. - ${game.title}`,
             description: game.description,
             images: [{ url: game.image }],
         },
